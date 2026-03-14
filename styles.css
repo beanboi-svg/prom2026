@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Condensed+One&family=Special+Gothic+Expanded+One&family=Special+Gothic:wght@400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Condensed+One&family=Special+Gothic+Expanded+One&family=Special+Gothic:wght@400..700&display=swap');
+
+body {
+    font-family: 'Special Gothic', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #230B0B;
+}
+
+h1 {
+    font-family: 'Special Gothic Condensed One', sans-serif;
+    color: #FD793D;
+    font-size: 30px;
+    line-height: 39px;
+    font-weight: 400;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.countdown {
+    display: flex;
+    flex-direction: row;
+    color: #F4F1EA;
+    margin-top: 10px;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+}
+
+.countdown-number {
+    font-size: 80px;
+    line-height: 104px;
+    font-family: 'Special Gothic Expanded One', sans-serif;
+    font-weight: 400;
+}
+
+.countdown-label {
+    font-size: 20px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+p {
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 25px;
+        line-height: 33px;
+    }
+    .countdown-item {
+        width: 136px;
+    }
+    .countdown-number {
+        font-size: 50px;
+        line-height: 65px;
+    }
+    .countdown-label {
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    h1 {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .countdown-item {
+        width: 95px;
+    }
+    .countdown-number {
+        font-size: 40px;
+        line-height: 52px;
+    }
+}
