@@ -69,6 +69,8 @@ p {
     font-size: 12px;
     line-height: 16px;
     margin: 0;
+    width: 300px;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
