@@ -1,25 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Condensed+One&family=Special+Gothic+Expanded+One&family=Special+Gothic:wght@400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Special+Gothic+Condensed+One&family=Special+Gothic+Expanded+One&family=Special+Gothic:wght@400..700&display=swap");
 
 body {
-    font-family: 'Special Gothic', sans-serif;
-    font-weight: 400;
     margin: 0;
     padding: 0;
+    font-family: "Special Gothic", sans-serif;
+    font-weight: 400;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
 
+p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+}
+
+a,
+a:visited {
+    color: #0057b8;
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px;
+    background-color: #f7d060;
+}
+
+.banner-contain {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: right;
+}
+
+.banner-contain.center {
+    justify-content: center;
+}
+
+.banner .banner-contain:last-child {
+    cursor: pointer;
+}
+
+.banner-text {
+    width: auto;
+    padding-left: 8px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    position: relative;
     overflow: hidden;
-    background-color: #230B0B;
+    background-color: #230b0b;
 }
 
 .wrapper::before {
@@ -28,9 +73,9 @@ body {
     inset: 0;
     z-index: 0;
     background-image: url("assets/texture.png");
-    background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     opacity: 0.65;
 }
 
@@ -40,20 +85,20 @@ body {
 }
 
 h1 {
-    font-family: 'Special Gothic Condensed One', sans-serif;
-    color: #FD793D;
+    margin: 0;
+    color: #fd793d;
+    font-family: "Special Gothic Condensed One", sans-serif;
     font-size: 30px;
     line-height: 39px;
     font-weight: 400;
-    margin: 0;
     text-transform: uppercase;
 }
 
 .countdown {
     display: flex;
     flex-direction: row;
-    color: #F4F1EA;
     margin-top: 10px;
+    color: #f4f1ea;
 }
 
 .countdown-item {
@@ -64,9 +109,9 @@ h1 {
 }
 
 .countdown-number {
+    font-family: "Special Gothic Expanded One", sans-serif;
     font-size: 80px;
     line-height: 104px;
-    font-family: 'Special Gothic Expanded One', sans-serif;
     font-weight: 400;
 }
 
@@ -82,12 +127,62 @@ h1 {
     padding: 20px;
 }
 
-p {
-    font-size: 12px;
-    line-height: 16px;
-    margin: 0;
+.footer-text {
     width: 300px;
-    text-align: center;
+}
+
+.statement {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(35, 11, 11, 0.68);
+}
+
+.statement.is-open {
+    display: flex;
+}
+
+body.statement-open {
+    overflow: hidden;
+}
+
+.statement-contain {
+    display: flex;
+    flex-direction: column;
+    width: min(650px, 100%);
+    max-height: 100%;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+.statement-close {
+    display: flex;
+    justify-content: right;
+    padding: 30px 30px 0 30px;
+    cursor: pointer;
+}
+
+.statement-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 18px;
+    padding: 30px;
+}
+
+.statement-text {
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: left;
 }
 
 @media (max-width: 768px) {
@@ -95,16 +190,42 @@ p {
         font-size: 25px;
         line-height: 33px;
     }
+
     .countdown-item {
         width: 136px;
     }
+
     .countdown-number {
         font-size: 50px;
         line-height: 65px;
     }
+
     .countdown-label {
         font-size: 15px;
         line-height: 20px;
+    }
+
+    .statement {
+        padding: 14px;
+    }
+
+    .statement-contain {
+        width: min(560px, 92vw);
+        max-height: 84dvh;
+    }
+
+    .statement-close {
+        padding: 18px 18px 0 18px;
+    }
+
+    .statement-text-wrapper {
+        gap: 16px;
+        padding: 18px;
+    }
+
+    .statement-text {
+        font-size: 16px;
+        line-height: 26px;
     }
 }
 
@@ -113,11 +234,36 @@ p {
         font-size: 20px;
         line-height: 26px;
     }
+
     .countdown-item {
         width: 95px;
     }
+
     .countdown-number {
         font-size: 40px;
         line-height: 52px;
+    }
+
+    .statement {
+        padding: 10px;
+    }
+
+    .statement-contain {
+        width: 90vw;
+        max-height: 78dvh;
+    }
+
+    .statement-close {
+        padding: 14px 14px 0 14px;
+    }
+
+    .statement-text-wrapper {
+        gap: 14px;
+        padding: 14px;
+    }
+
+    .statement-text {
+        font-size: 15px;
+        line-height: 24px;
     }
 }
