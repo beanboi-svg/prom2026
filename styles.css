@@ -169,6 +169,13 @@ body.statement-open {
     cursor: pointer;
 }
 
+.statement-close {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: #fff;
+}
+
 .statement-text-wrapper {
     display: flex;
     flex-direction: column;
@@ -250,11 +257,27 @@ body.statement-open {
 
     .statement-contain {
         width: 90vw;
-        max-height: 78dvh;
+        max-height: 88dvh;
+        overflow-y: scroll;
+        scrollbar-gutter: stable;
     }
 
     .statement-close {
         padding: 14px 14px 0 14px;
+    }
+
+    .statement-contain::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    .statement-contain::-webkit-scrollbar-thumb {
+        background-color: rgba(35, 11, 11, 0.45);
+        border-radius: 999px;
+    }
+
+    .statement-contain {
+        scrollbar-width: auto;
+        scrollbar-color: rgba(35, 11, 11, 0.45) transparent;
     }
 
     .statement-text-wrapper {
