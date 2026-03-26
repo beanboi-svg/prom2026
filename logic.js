@@ -11,7 +11,7 @@
   const statement = document.querySelector(".statement");
   const closeStatementTrigger = document.querySelector(".statement-close");
 
-  const targetDate = new Date(2026, 2, 30, 14, 45, 0).getTime(); // Mar 30, 2026 2:45 PM (local time)
+  const targetDate = new Date(2026, 2, 30, 0, 0, 0).getTime(); // Mar 30, 2026 12:00 AM (local time)
   const format = (num) => String(num).padStart(2, "0");
   const externalLeaveMessage = "You are leaving this site and going to an external vendor. Continue?";
 
